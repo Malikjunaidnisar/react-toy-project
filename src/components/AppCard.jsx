@@ -1,5 +1,5 @@
 
-import AppCardData from '../appData/AppCardData.js'
+import AppCardData from '../AppData/AppCardData.js'
 import {Link} from 'react-router'
 const AppCard =()=>{
 	return(

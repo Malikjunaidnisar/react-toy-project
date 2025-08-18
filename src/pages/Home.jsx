@@ -1,4 +1,4 @@
-import AppCard from '../components/AppCardData.jsx'
+import AppCard from '../components/AppCard.jsx'
 import{Link} from 'react-router'
 
 const  Home =()=>{
