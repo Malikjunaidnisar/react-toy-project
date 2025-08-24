@@ -29,7 +29,7 @@ const StepperForm = ()=>{
 
 	const handleStep =(e)=>{
 	e.preventDefault()
-	alert(e.target.name.value)
+	
 		if(!e.target.name.value){
 			
 		alert("Pls Fill This Feild")
