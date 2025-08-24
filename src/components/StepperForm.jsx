@@ -29,6 +29,7 @@ const StepperForm = ()=>{
 
 	const handleStep =(e)=>{
 	e.preventDefault()
+	alert(e.target.name.value)
 		if(!e.target.name.value){
 			
 		alert("Pls Fill This Feild")
@@ -43,15 +44,17 @@ const StepperForm = ()=>{
 	const unHighlightStep ="py-1 border border-green-500 text-center text-green-500 w-9 h-9  rounded-3xl inline-block"
 
 	const handleInfo =(e)=>{
-	
+		
 		setInf((prevData)=>({
 			...prevData,[e.target.name]:e.target.value
 		}))
+		
 	}
 	const handleSubmit=(e)=>{
 		e.preventDefault()
 		alert([inf.name,inf.email,inf.contact])
 	}
+	
 	return(
 		<>
 		<div className="mt-5 flex items-center justify-center">
@@ -81,8 +84,10 @@ const StepperForm = ()=>{
 		<div className="mt-10">
 			<form onSubmit={handleStep}>
 				<div className='flex gap-2 items-center justify-between'>
+				<label htmlFor="">{formData[step].label}</label>
+				<input type={formData[step].typefor} placeholder={formData[step].placeholder} onChange={handleInfo} name={Object.keys(inf)[step]} value={Object.values(inf)[step]}/>
 				</div>
-
+				
 				<div className="flex justify-end">
 				<button className="mt-5 bg-green-400 w-32 border cursor-pointer" type='submit' disabled={step === formData.length}>Next</button>
 				</div>
