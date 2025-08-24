@@ -1,3 +1,20 @@
+#root{
+	margin:0;
+	padding:0
+}
+.imagemargin{
+	
+	background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqTrWHZCBfwKWoybHrx5TvX8qYot0r-D99B-EZS141Fr3eXdaniGZFQxk&s');
+	/*width:36px;
+	height:36px;*/
+	background-size:cover;
+	border:1px solid black;
+	color:rgba(0,0,0,0)
+	
+}
+.wd{
+	width:500px;
+}
 /*#root {
   max-width: 1280px;
   margin: 0 auto;

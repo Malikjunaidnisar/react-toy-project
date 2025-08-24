@@ -39,11 +39,11 @@ const StepperForm = ()=>{
 		setStep(step+1)
 		//setStepCount(stepCount+1)
 	}
-	const highlightStep ="bg-red-500 border text-center w-6 rounded-3xl inline-block"
-	const unHighlightStep ="border text-center w-6 rounded-3xl inline-block"
+	const highlightStep ="py-1 imagemargin border border-green-500  text-center text-green-500 w-9 h-9 rounded-3xl  inline-block"
+	const unHighlightStep ="py-1 border border-green-500 text-center text-green-500 w-9 h-9  rounded-3xl inline-block"
 
 	const handleInfo =(e)=>{
-		{/*setInf((prevData)=>({...prevData,[e.target.name]:e.target.value})*/}
+	
 		setInf((prevData)=>({
 			...prevData,[e.target.name]:e.target.value
 		}))
@@ -54,20 +54,21 @@ const StepperForm = ()=>{
 	}
 	return(
 		<>
-		
+		<div className="mt-5 flex items-center justify-center">
 		{formSteps.map((s,i)=>(
 			<>
-		{step > s-1 && <img className="rounded-3xl w-9 inline-block " src ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdp-hHHMFwY2Hy190ImkaVakDvPDWrvyA0-6KbOUQwFlx1CwEcdl8qkCUK&s=10" />}
 		
-		{step <= s-1&& <div className={step == s-1 ? highlightStep:unHighlightStep}>{s}</div>}
-		{i<formSteps.length-1 && <div className="border inline-block w-5"></div>}
+		<div className={step >= s ? highlightStep:unHighlightStep} >{step >=s ?s:s}</div>
+		{i<formSteps.length-1 && <div className="border border-green-500    w-16 h-0"></div>}
+		
+		
 			</>
 		))}
+		</div>
 
 		{/*}{step < formData.length &&
 		<>
-		<div className={step == formSteps[step]-1 ? highlightStep:unHighlightStep}>1</div>
-		<div className="border inline-block w-5"></div>
+		
 	
 		<div className={step == formSteps[step]-1? highlightStep:unHighlightStep}>2</div>
 	
@@ -75,12 +76,16 @@ const StepperForm = ()=>{
 		<div className={step == formSteps[step]-1?highlightStep:unHighlightStep}>3</div>
 		<div className="border inline-block w-5"></div>
 		<div className={step == formSteps[step]-1?highlightStep:unHighlightStep}>4</div>*/}
+		
 		{step < formData.length &&
-		<div>
+		<div className="mt-10">
 			<form onSubmit={handleStep}>
-				<label htmlFor='formData'>{formData[step].label}</label>
-				<input onChange={handleInfo} id='formData' type={formData[step].typefor} name={Object.keys(inf)[step]} value={Object.values(inf)[step]} placeholder={formData[step].placeholder} />
-				<button className="border cursor-pointer" type='submit' disabled={step === formData.length}>Next</button>
+				<div className='flex gap-2 items-center justify-between'>
+				</div>
+
+				<div className="flex justify-end">
+				<button className="mt-5 bg-green-400 w-32 border cursor-pointer" type='submit' disabled={step === formData.length}>Next</button>
+				</div>
 			</form>
 		</div>
 		}
