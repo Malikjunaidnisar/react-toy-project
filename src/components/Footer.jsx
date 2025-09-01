@@ -1,11 +1,11 @@
 
-//import { Facebook } from 'lucide-react';
-//import { Twitter } from 'lucide-react';
-//import { Github } from 'lucide-react';
-//import { Dribbble } from 'lucide-react';
-//import { FaDiscord } from "react-icons/fa";
+import { Facebook } from 'lucide-react';
+import { Twitter } from 'lucide-react';
+import { Github } from 'lucide-react';
+import { Dribbble } from 'lucide-react';
+import { FaDiscord } from "react-icons/fa";
 
-import footerLink from '../appData/footerData.js'
+import footerLink from '../AppData/footerData.js'
 const Footer =()=>{
 return(	
 <>

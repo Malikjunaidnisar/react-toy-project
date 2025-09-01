@@ -4,6 +4,7 @@ import { StrictMode } from 'react'
 import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
 import Contact from './pages/Contact.jsx'
+import Project1 from './pages/Project1.jsx'
 import Layout from './components/Layout.jsx'
 import Todo from './components/Todo.jsx'
 import Quiz from './components/Quiz.jsx'
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
 			{
 				path:'/quizapp',
 				element:<Quiz />
+			},
+			{
+				path:'/project1',
+				element:<Project1 />
 			}
 		]
 	}
